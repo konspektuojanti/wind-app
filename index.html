@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcam and ASCII Art</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+    #asciiArt {
+      white-space: pre;
+      line-height: 8px;
+      font-size: 8px;
+    }
+    #videoContainer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    video {
+      width: 320px;
+      height: 240px;
+      background: black;
+    }
+    button {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Webcam and ASCII Art</h1>
+  <div id="videoContainer">
+    <video id="videoElement" autoplay></video>
+    <div id="asciiArt"></div>
+  </div>
+  <button id="startBtn">Start Recording</button>
+  <button id="stopBtn" disabled>Stop Recording</button>
+  <a id="downloadLink" style="display:none;">Download ASCII Art Video</a>
+
+  <script src="app.js"></script>
+</body>
+</html>
