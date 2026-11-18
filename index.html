@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <p id="kryptis"></p><br>
-        <p id="greitis"></p><br>
-        <button id="dir">GROK</button>
-        <script src="app.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eismo info weather station</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap');
+
+        body {
+            background: #F5DBC6;
+            color: #0D0D0D;
+            font-family: 'Roboto Mono', monospace;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        h1 { text-align: center; }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            background: #C6F5F3;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+
+        .label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .value { font-size: 1.25rem; font-weight: 600; }
+
+        @media (max-width: 600px) {
+            .row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="station-name"></h1>
+
+    <div class="row">
+        <div><span class="label">Kilometre</span><span class="value" id="kilometer"></span></div>
+        <div><span class="label">Latitude</span><span class="value" id="lat"></span></div>
+        <div><span class="label">Longitude</span><span class="value" id="lng"></span></div>
+    </div>
+
+    <div class="row">
+        <div><span class="label">Air temp (°C)</span><span class="value" id="air-temp"></span></div>
+        <div><span class="label">Road temp (°C)</span><span class="value" id="road-temp"></span></div>
+        <div><span class="label">Dew point (°C)</span><span class="value" id="dew-point"></span></div>
+    </div>
+
+    <div class="row">
+        <div><span class="label">Wind avg (m/s)</span><span class="value" id="wind-avg"></span></div>
+        <div><span class="label">Wind max (m/s)</span><span class="value" id="wind-max"></span></div>
+        <div><span class="label">Wind direction</span><span class="value" id="wind-dir"></span></div>
+    </div>
+
+    <div class="row">
+        <div><span class="label">Precipitation type</span><span class="value" id="precip-type"></span></div>
+        <div><span class="label">Precipitation amount</span><span class="value" id="precip-amount"></span></div>
+        <div><span class="label">Friction coefficient</span><span class="value" id="friction"></span></div>
+    </div>
+
+    <button id="dir">GROK</button>
+    <script src="app.js"></script>
+</body>
 </html>
