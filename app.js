@@ -5,8 +5,18 @@ fetch(yourUrl)
     .then(response => response.json())
     .then(data => {
         nida = data.find(selStation => selStation.numeris === "167");
-        document.getElementById("kryptis").textContent=nida.vejo_kryptis;
-        document.getElementById("greitis").textContent=nida.vejo_greitis_vidut;
+        document.getElementById("wind-dir").textContent=nida.vejo_kryptis;
+        document.getElementById("station-name").textContent=nida.pavadinimas;
+        document.getElementById("lat").textContent=nida.lat;
+         document.getElementById("long").textContent=nida.lng;
+         document.getElementById("air-temp").textContent=nida.oro_temperatura;
+         document.getElementById("road-temp").textContent=nida.dangos_temperatura;
+        document.getElementById("dew-point").textContent=nida.rasos_taskas;
+        document.getElementById("wind-avg").textContent=nida.vejo_greitis_vidut;
+        document.getElementById("wind-max").textContent=nida.vejo_greitis_maks;
+        document.getElementById("precip-type").textContent=nida.krituliu_tipas;
+        document.getElementById("precip-amount").textContent=nida.krituliu_kiekis;
+        document.getElementById("friction").textContent=nida.sukibimo_koeficientas;
     });
 console.log(nida);
 
