@@ -1,19 +1,12 @@
 const yourUrl = "https://eismoinfo.lt/weather-conditions-service"
 
-function Get(yourUrl){
-    var Httpreq = new XMLHttpRequest(); // a new request
-    Httpreq.open("GET",yourUrl,false);
-    Httpreq.send(null);
-    return Httpreq.responseText;          
-}
-
-var json_obj = JSON.parse(Get(yourUrl));
-const nida = json_obj.find(selStation => selStation.numeris === "167");
-
-
-
-document.getElementById("kryptis").textContent=nida.vejo_kryptis;
-document.getElementById("greitis").textContent=nida.vejo_greitis_vidut;
+fetch(yourUrl)
+    .then(response => response.json())
+    .then(data => {
+        const nida = data.find(selStation => selStation.numeris === "167");
+        document.getElementById("kryptis").textContent=nida.vejo_kryptis;
+        document.getElementById("greitis").textContent=nida.vejo_greitis_vidut;
+    });
 
 const dir = {
     "Šiaurės rytų": 45,
