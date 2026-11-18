@@ -8,12 +8,12 @@ function Get(yourUrl){
 }
 
 var json_obj = JSON.parse(Get(yourUrl));
-json_obj.find(selStation => selStation.numeris === "167");
+const nida = json_obj.find(selStation => selStation.numeris === "167");
 
 
 
-document.getElementById("kryptis").textContent=selStation.vejo_kryptis;
-document.getElementById("greitis").textContent=selStation.vejo_greitis_vidut;
+document.getElementById("kryptis").textContent=nida.vejo_kryptis;
+document.getElementById("greitis").textContent=nida.vejo_greitis_vidut;
 
 const dir = {
     "Šiaurės rytų": 45,
@@ -31,9 +31,9 @@ function audioPlay(){
     var osc = context.createOscillator(); // instantiate an oscillator
 
     osc.type = 'sine'; // this is the default - also square, sawtooth, triangle
-    osc.frequency.value = dir[selStation.vejo_kryptis]; // Hz
+    osc.frequency.value = dir[nida.vejo_kryptis]; // Hz
     var vol = context.createGain();
-    vol.gain.value = selStation.vejo_greitis_vidut; // from 0 to 1, 1 full volume, 0 is muted
+    vol.gain.value = nida.vejo_greitis_vidut; // from 0 to 1, 1 full volume, 0 is muted
     osc.connect(vol); // connect osc to vol
     vol.connect(context.destination); // connect vol to context destination
 
