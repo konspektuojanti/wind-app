@@ -1,12 +1,14 @@
 const yourUrl = "https://eismoinfo.lt/weather-conditions-service"
 
+let nida;
 fetch(yourUrl)
     .then(response => response.json())
     .then(data => {
-        const nida = data.find(selStation => selStation.numeris === "167");
+        nida = data.find(selStation => selStation.numeris === "167");
         document.getElementById("kryptis").textContent=nida.vejo_kryptis;
         document.getElementById("greitis").textContent=nida.vejo_greitis_vidut;
     });
+console.log(nida);
 
 const dir = {
     "Šiaurės rytų": 45,
