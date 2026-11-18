@@ -8,7 +8,7 @@ fetch(yourUrl)
         document.getElementById("wind-dir").textContent=nida.vejo_kryptis;
         document.getElementById("station-name").textContent=nida.pavadinimas;
         document.getElementById("lat").textContent=nida.lat;
-         document.getElementById("long").textContent=nida.lng;
+         document.getElementById("lng").textContent=nida.lng;
          document.getElementById("air-temp").textContent=nida.oro_temperatura;
          document.getElementById("road-temp").textContent=nida.dangos_temperatura;
         document.getElementById("dew-point").textContent=nida.rasos_taskas;
