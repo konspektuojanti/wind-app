@@ -17,8 +17,8 @@ fetch(yourUrl)
         document.getElementById("precip-type").textContent=nida.krituliu_tipas;
         document.getElementById("precip-amount").textContent=nida.krituliu_kiekis;
         document.getElementById("friction").textContent=nida.sukibimo_koeficientas;
+         document.getElementById("kilometer").textContent=nida.kilometras;
     });
-console.log(nida);
 
 const dir = {
     "Šiaurės rytų": 45,
