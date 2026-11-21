@@ -7,6 +7,7 @@ fetch(yourUrl)
         nida = data.find(selStation => selStation.numeris === "167");
         if (nida === undefined) {
        document.getElementById("station-name").textContent = "technical difficulties, try again later";
+            return;
 }
         document.getElementById("wind-dir").textContent=nida.vejo_kryptis ?? "no data";
         document.getElementById("station-name").textContent=nida.pavadinimas ?? "no data";
