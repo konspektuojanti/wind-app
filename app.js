@@ -38,7 +38,7 @@ function audioPlay(){
     osc.type = 'sine'; // this is the default - also square, sawtooth, triangle
     osc.frequency.value = dir[nida.vejo_kryptis]; // Hz
     var vol = context.createGain();
-    vol.gain.value = nida.vejo_greitis_vidut; // from 0 to 1, 1 full volume, 0 is muted
+    Math.min( Math.max(Number(nida.vejo_greitis_vidut) / 15, 0.1 ), 1 )
     osc.connect(vol); // connect osc to vol
     vol.connect(context.destination); // connect vol to context destination
 
