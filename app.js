@@ -20,15 +20,15 @@ fetch(yourUrl)
         document.getElementById("kilometer").textContent=nida.kilometras;
     });
 
-const dir = {
-    "Šiaurės rytų": 45,
-    "Rytų": 90,
-    "Pietryčių": 135,
-    "Pietų": 180,
-    "Pietvakarių": 225,
-    "Vakarų": 270,
-    "Šiaurės vakarų": 315,
-    "Šiaurės": 360
+const dir2freq = {
+    "Šiaurės rytų": 220,
+    "Rytų": 246.9,
+    "Pietryčių": 261.6,
+    "Pietų": 293.7,
+    "Pietvakarių": 329.6,
+    "Vakarų": 349.2,
+    "Šiaurės vakarų": 392,
+    "Šiaurės": 196,
 }
 
 function audioPlay(){
