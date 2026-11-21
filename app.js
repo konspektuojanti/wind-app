@@ -36,7 +36,8 @@ function audioPlay(){
     var osc = context.createOscillator(); // instantiate an oscillator
 
     osc.type = 'sine'; // this is the default - also square, sawtooth, triangle
-    osc.frequency.value = dir[nida.vejo_kryptis]; // Hz
+    osc.frequency.value = dir2freq[nida.vejo_kryptis]; // Hz
+    console.log(nida.vejo_kryptis, osc.frequency.value);
     var vol = context.createGain();
     Math.min( Math.max(Number(nida.vejo_greitis_vidut) / 15, 0.1 ), 1 )
     osc.connect(vol); // connect osc to vol
