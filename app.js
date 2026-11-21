@@ -7,7 +7,8 @@ fetch(yourUrl)
         nida = data.find(selStation => selStation.numeris === "166666666667");
         if (nida === undefined) {
        document.getElementById("station-name").textContent = "technical difficulties, try again later";
- return;
+       document.getElementById("dir").textContent = "please do not press me, i do not work";
+ return;   
 }
         document.getElementById("wind-dir").textContent=nida.vejo_kryptis ?? "no data";
         document.getElementById("station-name").textContent=nida.pavadinimas ?? "no data";
@@ -37,8 +38,8 @@ const dir2freq = {
 
 function audioPlay(){
     if (nida === undefined) {
-       document.getElementById("dir2freq").textContent = "please do not press me, i do not work";
-     return;
+      document.getElementById("dir").textContent = "please do not press me, i do not work";
+ return;
 }
     var context = new AudioContext();
     var osc = context.createOscillator(); // instantiate an oscillator
