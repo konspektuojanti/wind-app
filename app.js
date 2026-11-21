@@ -8,16 +8,16 @@ fetch(yourUrl)
         document.getElementById("wind-dir").textContent=nida.vejo_kryptis;
         document.getElementById("station-name").textContent=nida.pavadinimas;
         document.getElementById("lat").textContent=nida.lat;
-         document.getElementById("lng").textContent=nida.lng;
-         document.getElementById("air-temp").textContent=nida.oro_temperatura;
-         document.getElementById("road-temp").textContent=nida.dangos_temperatura;
+        document.getElementById("lng").textContent=nida.lng;
+        document.getElementById("air-temp").textContent=nida.oro_temperatura;
+        document.getElementById("road-temp").textContent=nida.dangos_temperatura;
         document.getElementById("dew-point").textContent=nida.rasos_taskas;
         document.getElementById("wind-avg").textContent=nida.vejo_greitis_vidut;
         document.getElementById("wind-max").textContent=nida.vejo_greitis_maks;
         document.getElementById("precip-type").textContent=nida.krituliu_tipas;
         document.getElementById("precip-amount").textContent=nida.krituliu_kiekis;
         document.getElementById("friction").textContent=nida.sukibimo_koeficientas;
-         document.getElementById("kilometer").textContent=nida.kilometras;
+        document.getElementById("kilometer").textContent=nida.kilometras;
     });
 
 const dir = {
@@ -42,7 +42,7 @@ function audioPlay(){
     osc.connect(vol); // connect osc to vol
     vol.connect(context.destination); // connect vol to context destination
 
-    osc.connect(context.destination); // connect it to the destination
+   
     osc.start(); // start the oscillator
 };
   
