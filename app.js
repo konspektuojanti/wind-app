@@ -40,6 +40,11 @@ function audioPlay(){
       document.getElementById("toggle").checked = false;
  return;
 }
+    if (sound !== undefined) {
+        sound.stop();
+        sound = undefined;
+ return;
+}
     var context = new AudioContext();
     var osc = context.createOscillator(); // instantiate an oscillator
 
