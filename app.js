@@ -7,8 +7,6 @@ fetch(yourUrl)
         nida = data.find(selStation => selStation.numeris === "167");
         if (nida === undefined) {
        document.getElementById("station-name").textContent = "technical difficulties, try again later";
-       document.getElementById("dir").textContent = "please do not press me, i do not work";
- return;   
 }
         document.getElementById("wind-dir").textContent=nida.vejo_kryptis ?? "no data";
         document.getElementById("station-name").textContent=nida.pavadinimas ?? "no data";
@@ -39,7 +37,7 @@ const dir2freq = {
 let sound;
 function audioPlay(){
     if (nida === undefined) {
-      document.getElementById("dir").textContent = "please do not press me, i do not work";
+      document.getElementById("toggle").checked = false;
  return;
 }
     var context = new AudioContext();
@@ -58,4 +56,4 @@ function audioPlay(){
     sound = osc;
 };
   
-document.getElementById("dir").onclick = () => audioPlay();
+document.getElementById("toggle").onchange = () => audioPlay();
