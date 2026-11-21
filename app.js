@@ -36,6 +36,7 @@ const dir2freq = {
     "Šiaurės": 196
 }
 
+let sound;
 function audioPlay(){
     if (nida === undefined) {
       document.getElementById("dir").textContent = "please do not press me, i do not work";
@@ -54,6 +55,7 @@ function audioPlay(){
 
    
     osc.start(); // start the oscillator
+    sound = osc;
 };
   
 document.getElementById("dir").onclick = () => audioPlay();
