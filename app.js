@@ -4,7 +4,7 @@ let nida;
 fetch(yourUrl)
     .then(response => response.json())
     .then(data => {
-        nida = data.find(selStation => selStation.numeris === "167");
+        nida = data.find(selStation => selStation.numeris === "166666666667");
         if (nida === undefined) {
        document.getElementById("station-name").textContent = "technical difficulties, try again later";
  return;
